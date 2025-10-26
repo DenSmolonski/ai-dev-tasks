@@ -8,6 +8,7 @@ Guidelines for managing task lists in markdown files to track progress on comple
   1. When you finish **all sub-tasks** of a parent task, immediately mark them as completed by changing `[ ]` to `[x]`.
   2. If **all** subtasks underneath a parent task are now `[x]`, follow this sequence:
     - **First**: Run the full test suite (`pytest`, `npm test`, `bin/rails test`, etc.)
+    - **Second**: Run the lint checking (`pylint`, `npm forma:check`, etc.) 
     - **Clean up**: Remove any temporary files and temporary code before committing
 
   3. Once all the subtasks are marked completed and changes have been committed, mark the **parent task** as completed.
@@ -25,7 +26,7 @@ Guidelines for managing task lists in markdown files to track progress on comple
 
 ## AI Instructions
 
-When working with task lists, the AI must:
+When working with task lists, the ***AI MUST***:
 
 1. Regularly update the task list file after finishing all sub-tasks of a parent task.
 2. Follow the completion protocol:
@@ -35,4 +36,6 @@ When working with task lists, the AI must:
 4. Keep "Relevant Files" accurate and up to date.
 5. Before starting work, check which parent task is next and work on all its sub-tasks.
 6. After implementing all sub-tasks of a parent task, update the file and then pause for user approval before starting the next parent task.
+
+VERY IMPORTANT: don't guess and better ***ASK*** if you have more than two way how to implement task
 
